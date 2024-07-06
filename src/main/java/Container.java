@@ -15,7 +15,7 @@ public class Container {
         List<String> processedNums = new ArrayList<>();
 
         for (Pair pair : pairs) {
-            int pairSum = pair.a() + pair.b();
+            int pairSum = pair.val1() + pair.val2();
             if ( pairSum > 0 ) {
                 processedNums.add(Integer.toString(pairSum));
             }
@@ -27,6 +27,6 @@ public class Container {
     }
 
     public void removeOnCondition() {
-        pairs.removeIf(tempPair -> tempPair.a() * tempPair.b() >= 0);
+        pairs.removeIf(tempPair -> tempPair.val1() * tempPair.val2() >= 0);
     }
 }
